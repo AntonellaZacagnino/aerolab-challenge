@@ -1,0 +1,91 @@
+@import "../../styles/variables.module.scss";
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 348px;
+  height: 506px;
+  margin: 24px 24px 24px 0;
+  .card {
+    display: grid;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    .image {
+      width: 348px;
+      border: 1px solid #dae4f2;
+      box-sizing: border-box;
+      border-radius: 16px 16px 0px 0px;
+      padding: 64px 34px 76px 34px;
+    }
+    .description {
+      border: 1px solid #dae4f2;
+      box-sizing: border-box;
+      border-radius: 0px 0px 16px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 16px 24px 24px;
+      h6 {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        color: $neutral-900;
+        margin: 0px 0px;
+      }
+      span {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: $neutral-600;
+      }
+    }
+  }
+
+  .redeem,
+  .notAvaiable {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 348px;
+    height: 59px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    margin: 16px 0px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+  }
+  .redeem {
+    cursor: pointer;
+    background: linear-gradient(102.47deg, #176feb -5.34%, #ff80ff 106.58%);
+    color: white;
+    span {
+      margin: 0 5px !important;
+      padding: 0 !important;
+    }
+  }
+
+  .notAvaiable {
+    cursor: not-allowed;
+    background: $neutral-200;
+    color: $neutral-600;
+    span {
+      margin: 0 5px !important;
+      padding: 0 !important;
+    }
+  }
+  .redeem:hover {
+    opacity: 0.7;
+  }
+}

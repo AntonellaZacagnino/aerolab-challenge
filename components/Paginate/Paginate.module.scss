@@ -1,0 +1,27 @@
+@import "../../styles/variables.module.scss";
+.prevBtn,
+.nextBtn {
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  background: $neutral-200;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 18px;
+}
+.prevBtn:hover,
+.nextBtn:hover {
+  opacity: 0.6;
+}
+.pageLink {
+  background: linear-gradient(
+    102.47deg,
+    $neutral-600 54%,
+    #176feb 38%,
+    #ff80ff 90%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

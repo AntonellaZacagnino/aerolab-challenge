@@ -1,0 +1,122 @@
+@import "../../styles/variables.module.scss";
+.coins {
+  z-index: 20;
+  display: flex;
+  width: 172px;
+  height: 48px;
+  padding: 8px 16px;
+  border: 1px solid #dae4f2;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  justify-content: space-between;
+  .mount {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    background: linear-gradient(102.47deg, #176feb -5.34%, #ff80ff 106.58%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .coinIcon {
+    height: 32px;
+    width: 32px;
+  }
+}
+.coins:hover {
+  opacity: 0.7;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  width: 312px;
+  height: 404px;
+  right: 0px;
+  top: 96px;
+  z-index: 10;
+  background: white;
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  border: 1px solid $neutral-300;
+  h6 {
+    padding: 24px;
+    border: 1px solid $neutral-300;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    color: $neutral-900;
+    margin: 0;
+  }
+  .aerocard {
+    padding: 16px !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+  .coinsBtn {
+    display: flex;
+    padding: 15px;
+    list-style: none;
+    .aeroBtn,
+    .active {
+      cursor: pointer;
+      padding: 4px 16px;
+      width: 85.33px;
+      height: 35px;
+      border-radius: 12px;
+      margin: 0px 4px;
+      font-family: Montserrat;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 150%;
+      border: none;
+    }
+    .aeroBtn {
+      background: #e6f0ff;
+      span {
+        background: linear-gradient(102.47deg, #176feb -5.34%, #ff80ff 106.58%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    .active {
+      span {
+        color: $neutral-100 !important;
+        background: none;
+        -webkit-text-fill-color: unset !important;
+        background-clip: unset !important;
+      }
+      background: linear-gradient(
+        102.47deg,
+        #176feb -5.34%,
+        #ff80ff 106.58%
+      ) !important;
+    }
+  }
+  .addCoinsBtn {
+    display: flex;
+    width: 264px;
+    height: 51px;
+    border: none;
+    background: linear-gradient(102.47deg, #176feb -5.34%, #ff80ff 106.58%);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    margin: 24px 0px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    color: white;
+    margin: 16px;
+    justify-content: center;
+    align-items: center;
+    span {
+      margin: 0 5px !important;
+      padding: 0 !important;
+    }
+  }
+  .aeroBtn:hover,
+  .addCoinsBtn:hover {
+    opacity: 0.7;
+  }
+}

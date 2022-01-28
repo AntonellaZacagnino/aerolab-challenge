@@ -1,0 +1,86 @@
+@import "../../styles/variables.module.scss";
+
+.filterNav {
+  list-style: none;
+  display: flex;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  color: $neutral-600;
+  width: 1464px;
+  padding: 0;
+  .filter {
+    padding-right: 30px;
+    border-right: solid 2px $neutral-300;
+    select {
+      margin: 0px 16px;
+      padding-left: 24px;
+      font-family: Montserrat;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 150%;
+      color: $neutral-600;
+      width: 256px;
+      height: 59px;
+      border: 1px solid $neutral-300;
+      border-radius: 16px;
+      option:hover {
+        background-color: $neutral-100;
+      }
+    }
+  }
+  .sort {
+    align-items: center;
+    display: flex;
+    padding: 0 100px 0 40px;
+    .filterBtn,
+    .active {
+      font-family: Montserrat;
+      font-weight: 600;
+      font-size: 18px;
+      margin: 0px 12px;
+      padding: 8px 24px;
+      width: 173px;
+      height: 43px;
+      border-radius: 12px;
+      border: none;
+    }
+    .filterBtn {
+      background: #e6f0ff;
+      span {
+        background: linear-gradient(102.47deg, #176feb 0%, #ff80ff 72%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+    .active {
+      span {
+        color: $neutral-100 !important;
+        background: none;
+        -webkit-text-fill-color: unset !important;
+        background-clip: unset !important;
+      }
+      background: linear-gradient(
+        102.47deg,
+        #176feb -5.34%,
+        #ff80ff 106.58%
+      ) !important;
+      padding: 8px 24px;
+      border-radius: 12px;
+    }
+    button:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .pages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 259px;
+    height: 64px;
+    border: 1px solid $neutral-300;
+    border-radius: 16px;
+    flex: none;
+  }
+}
