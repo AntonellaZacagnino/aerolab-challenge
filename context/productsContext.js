@@ -5,6 +5,7 @@ export const ProductsContext = createContext()
 export const ProductsProvider = ({children}) => {
     const [products, setProducts] = useState([]);
     const [itemOffset, setItemOffset] = useState(0);
+    const [loading, setLoading] = useState(true);
 
     const itemsPerPage = 16;
     const fetchProducts = () => {
@@ -16,17 +17,15 @@ export const ProductsProvider = ({children}) => {
         .then(res => res.json())
         return query;
     }
+    const productsList = []
     const getProducts = () => {
-        const endOffset = itemOffset + itemsPerPage;
-        console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-
         fetchProducts()
         .then(data => {
-            const productsList = []
             data.forEach(product => {
                 productsList.push(product)
             })
-            setProducts(productsList.slice(itemOffset, endOffset))
+            setProducts(productsList)
+            setLoading(false)
         })
     }
 
@@ -74,7 +73,7 @@ export const ProductsProvider = ({children}) => {
         })
     }
     return (
-        <ProductsContext.Provider value={{products, getProducts, sortLowest, sortHighest, sortRecent, filterCategory, fetchProducts}}>
+        <ProductsContext.Provider value={{products, getProducts, sortLowest, sortHighest, sortRecent, filterCategory, fetchProducts, itemsPerPage, itemOffset, setItemOffset, loading, setLoading}}>
             {children}
         </ProductsContext.Provider>
     )

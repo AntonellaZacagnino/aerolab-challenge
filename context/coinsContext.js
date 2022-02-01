@@ -9,8 +9,12 @@ export const CoinsProvider = ({children}) => {
         setCoins(coins + newCoins)
     }
 
+    const removeCoins = (coinsToRemove) => {
+        
+        setCoins(coins - coinsToRemove)
+    }
     return (
-        <CoinsContext.Provider value={{coins, addCoins}}>
+        <CoinsContext.Provider value={{coins, addCoins, removeCoins}}>
             {children}
         </CoinsContext.Provider>
     )

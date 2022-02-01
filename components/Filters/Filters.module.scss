@@ -82,5 +82,40 @@
     border: 1px solid $neutral-300;
     border-radius: 16px;
     flex: none;
+    padding: 0;
+    list-style: none;
+  }
+  .prevBtn::before,
+  .nextBtn::after {
+    height: 10px !important;
+    width: 10px !important;
+    border-bottom: 3px solid $neutral-500 !important;
+    border-right: 3px solid $neutral-500 !important;
+    content: " " !important;
+    display: inline-block !important;
+  }
+  .prevBtn::before {
+    margin: 0px 0px 0px 7px;
+    transform: rotate(135deg) !important;
+  }
+  .nextBtn::after {
+    margin: 8px 10px 0px 3px;
+    transform: rotate(-45deg) !important;
+  }
+  .prevBtn,
+  .nextBtn {
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    background: $neutral-200;
+    border-radius: 8px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 18px;
+  }
+  .prevBtn:hover,
+  .nextBtn:hover {
+    opacity: 0.6;
   }
 }
