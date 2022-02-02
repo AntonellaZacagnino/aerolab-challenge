@@ -8,7 +8,7 @@ import styles from './Coins.module.scss'
 import { mdiChevronDown } from '@mdi/js'
 import icon from '../../public/images/redeem-icon.svg'
 
-export const Coins = () => {
+function Coins() {
     const {coins, addCoins} = useContext(CoinsContext)
     const [showDropdown, setShowDropdown] = useState(0)
     const actualCoins = coins;
@@ -40,11 +40,13 @@ export const Coins = () => {
           <Image className={styles.aerocard} src={aerocard} alt="Aerocard" />
           <ul className={styles.coinsBtn}>
             <li className={selectedMount == 1000 ? styles.active : styles.aeroBtn} onClick={() =>handleCoins(1000)}> <span>1000</span> </li>
-            <li className={selectedMount == 5000 ? styles.active : styles.aeroBtn} value={5000} onClick={() => handleCoins(5000)}> <span>5000</span> </li>
-            <li className={selectedMount == 7500 ? styles.active : styles.aeroBtn} value={7500} onClick={() => handleCoins(7500)}> <span>7500</span> </li>
+            <li className={selectedMount == 5000 ? styles.active : styles.aeroBtn} onClick={() => handleCoins(5000)}> <span>5000</span> </li>
+            <li className={selectedMount == 7500 ? styles.active : styles.aeroBtn} onClick={() => handleCoins(7500)}> <span>7500</span> </li>
           </ul>
           <button className={styles.addCoinsBtn} onClick={() => addCoins(selectedMount)}> <Image className={styles.image} src={icon} alt='icon'/> Add Points </button>
         </div>
       </div>
     )
 }
+
+export default Coins

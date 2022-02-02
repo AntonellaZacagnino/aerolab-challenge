@@ -3,11 +3,10 @@ import React, { useContext, useEffect, useState } from "react";
 import { ProductsContext } from '../../context/productsContext';
 import ReactPaginate from "react-paginate";
 
-export default function Filters() {
+function Filters() {
     const [filter, setFilter] = useState(0)
-    const {products, sortLowest, sortHighest, sortRecent, filterCategory, itemsPerPage, setItemOffset, itemOffset, loading, setLoading} = useContext(ProductsContext);
+    const {products, sortLowest, sortHighest, sortRecent, filterCategory, itemsPerPage, setItemOffset, itemOffset, setLoading} = useContext(ProductsContext);
     const [category, setCategory] = useState('')
-    // const [pageCount, setPageCount] = useState(1);
     
     function handleFilter(number, type){
       setFilter(number);
@@ -73,22 +72,24 @@ export default function Filters() {
               </span>
               </button>
           </li>
-            <ReactPaginate
-              nextLabel=""
-              onPageChange={handlePageClick}
-              pageRangeDisplayed={0}
-              marginPagesDisplayed={0}
-              pageCount={pageCount}
-              previousLabel=''
-              pageClassName={styles.pageCount}
-              previousLinkClassName={styles.prevBtn}
-              nextLinkClassName={styles.nextBtn}
-              pageLabelBuilder={(pageCount) => pageLabel(pageCount)}
-              breakClassName="page-item"
-              breakLinkClassName="page-link"
-              containerClassName={styles.pages}
-              activeClassName="active"
-            />
+          <ReactPaginate
+            nextLabel=""
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={0}
+            marginPagesDisplayed={0}
+            pageCount={pageCount}
+            previousLabel=''
+            pageClassName={styles.pageCount}
+            previousLinkClassName={styles.prevBtn}
+            nextLinkClassName={styles.nextBtn}
+            pageLabelBuilder={(pageCount) => pageLabel(pageCount)}
+            breakClassName="page-item"
+            breakLinkClassName="page-link"
+            containerClassName={styles.pages}
+            activeClassName="active"
+          />
         </ul>
     )
 }
+
+export default Filters

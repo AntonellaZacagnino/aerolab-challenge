@@ -9,9 +9,9 @@ import { ToastContainer, toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import BarLoader from "react-spinners/BarLoader";
 
-export const ProductsList = () => {
+ function ProductsList () {
     const {coins, removeCoins} = useContext(CoinsContext);
-    const {products, getProducts, itemsPerPage, itemOffset, currentItems, loading} = useContext(ProductsContext);
+    const {products, getProducts, itemsPerPage, itemOffset, loading} = useContext(ProductsContext);
     const [redeemIsActive, setRedeemIsActive] = useState(0)
     const [item, setItem] = useState([])
     const [ev, setEv] = useState()
@@ -84,3 +84,5 @@ export const ProductsList = () => {
         </ul>
     )
 }   
+
+export default ProductsList

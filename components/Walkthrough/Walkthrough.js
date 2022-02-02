@@ -7,7 +7,7 @@ import choose from '../../public/images/choose.svg'
 import enjoy from '../../public/images/enjoy.svg'
 import styles from './Walkthrough.module.scss'
 
-export default function Walkthrough() {
+function Walkthrough() {
     return (
         <div className={styles.walkthrough}>
         <div className={[styles.card1, styles.card].join(" ")}>
@@ -43,3 +43,5 @@ export default function Walkthrough() {
       </div>
     )
 }
+
+export default Walkthrough

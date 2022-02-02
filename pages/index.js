@@ -5,14 +5,25 @@ import { mdiArrowDownThin, mdiGithub } from '@mdi/js'
 import image1 from '../public/images/image1.png'
 import logo from '../public/images/logo.svg'
 import styles from '../styles/Home.module.scss'
-import {Coins} from '../components/Coins/Coins'
-import { ProductsList } from '../components/ProductsList/ProducstList'
+import Coins from '../components/Coins/Coins'
+import  ProductsList  from '../components/ProductsList/ProducstList'
 import Walkthrough from '../components/Walkthrough/Walkthrough'
 import Filters from '../components/Filters/Filters'
 import { Link } from 'react-scroll';
 
-export default function Home() {
-
+export async function getServerSideProps() {
+  const res = await fetch('https://coding-challenge-api.aerolab.co/products', 
+    {headers: 
+        { "Authorization": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWVmMDNkZDZlMDQ1MzAwMWE3YzNlMTciLCJpYXQiOjE2NDMwNTQwNDV9.VVcZd3MqkZ7cq-HWT5KUyFWwkOPSwqIpIEesCPaL3y8"}
+    })
+  const products = await res.json()
+  return {
+    props :{
+      products
+    }
+  }
+}
+function Home({products}) {
   return (
     <div className={styles.container}>
       <Head>
@@ -67,4 +78,7 @@ export default function Home() {
       </footer>
     </div>
   )
+
 }
+
+export default Home;
