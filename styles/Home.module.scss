@@ -368,6 +368,33 @@
 //     }
 //   }
 // }
+@media (min-width: 1600px){
+  .landing{
+    margin-right: 3vw;
+    .title{
+      p{
+        font-size: 16px;
+      }
+    }
+    .imageContainer{
+      position: relative;
+      left: 4.5vw;
+      top: 6vw;
+      .image{
+        min-width: 850px !important;
+        min-height: 40vw !important;
+        left: -4vw !important;
+        bottom: 4vw !important;
+      }
+    }
+    .imageBG{
+      width: 36vw;
+      height: 30vw;
+      left: 6vw;
+      bottom: 24.2vw;
+    }
+  }
+}
 
 @media (max-width: 600px) {
   .grid {

@@ -1,4 +1,5 @@
 @import "../../styles/variables.module.scss";
+
 .coins {
   z-index: 20;
   display: flex;
@@ -127,6 +128,17 @@
   .addCoinsBtn:hover {
     opacity: 0.7;
   }
+}
+@media (min-width: 1600px){
+  .coins{
+    .mount{
+      font-size: 18px;
+    }
+  }
+    .dropdownContent{
+      height: 24vw;
+      text-align: center;
+    }
 }
 
 @media (max-width: 1024px){

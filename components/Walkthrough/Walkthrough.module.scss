@@ -88,6 +88,30 @@
   }
 }
 
+@media (min-width:1600px){
+  .walkthrough{
+    height: 25vw;
+    .card{
+      width: 23vw;
+      height: 33vw;
+      .inner{
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+    .card1{
+      right: -3%;
+    }
+    .card2{
+      right: 1%;
+    }
+    .card3{
+      right: 4%;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .walkthrough{
     .card{
