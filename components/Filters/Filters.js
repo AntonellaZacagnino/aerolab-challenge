@@ -40,6 +40,7 @@ function Filters() {
     }, [category, itemOffset,itemsPerPage])
     return (
         <ul className={styles.filterNav}>
+          <div className={styles.filterContainer}>
           <li className={styles.filter}>
             <span>Filter by:</span>
             <select onChange={(e) => setCategory(e.target.value)}>
@@ -56,22 +57,28 @@ function Filters() {
           </li>
           <li className={styles.sort}>
             <span>Sort by:</span>
-            <button className={filter == 1 ? styles.active : styles.filterBtn} onClick={() => handleFilter(1, 'recent')} id='recent'>
-              <span>
-                Most Recent
-              </span>
+            <div>
+              <button className={filter == 1 ? styles.active : styles.filterBtn} onClick={() => handleFilter(1, 'recent')} id='recent'>
+                <span className={`${styles.filterResponsive} ${styles.filterNew}`}></span>
+                <span className={styles.filterDesktop}>
+                  Most Recent
+                </span>
               </button>
-            <button className={filter == 2 ? styles.active : styles.filterBtn} onClick={() => handleFilter(2, 'lowest')} id='lowest'>
-              <span>
-                Lowest Price
-              </span>
+              <button className={filter == 2 ? styles.active : styles.filterBtn} onClick={() => handleFilter(2, 'lowest')} id='lowest'>
+                <span className={`${styles.filterResponsive} ${styles.filterLow}`}></span>
+                <span className={styles.filterDesktop}>
+                  Lowest Price
+                </span>
               </button>
-            <button className={filter == 3 ? styles.active : styles.filterBtn} onClick={() => handleFilter(3, 'highest')} id='highest'>
-              <span>
-                Highest Price
-              </span>
+              <button className={filter == 3 ? styles.active : styles.filterBtn} onClick={() => handleFilter(3, 'highest')} id='highest'>
+                <span className={`${styles.filterResponsive} ${styles.filterHigh}`}></span>
+                <span className={styles.filterDesktop}>
+                  Highest Price
+                </span>
               </button>
+            </div>
           </li>
+          </div>
           <ReactPaginate
             nextLabel=""
             onPageChange={handlePageClick}

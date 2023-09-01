@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+ import React, { useContext, useState, useEffect } from "react";
 import styles from './ProductsList.module.scss'
 import Image from "next/image";
 import icon from '../../public/images/redeem-icon.svg'

@@ -4,24 +4,24 @@
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  width: 80%;
 }
 .productContainer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  width: 348px;
-  height: 506px;
+  width: 20vw;
   margin: 24px 24px 24px 0;
   .card {
     display: grid;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
     .image {
-      width: 348px;
+      width: 20vw;
       border: 1px solid #dae4f2;
       box-sizing: border-box;
       border-radius: 16px 16px 0px 0px;
-      padding: 64px 34px 76px 34px;
+      padding: 64px 34px 60px 34px;
     }
     .description {
       border: 1px solid #dae4f2;
@@ -34,14 +34,14 @@
       padding: 16px 24px 24px;
       h6 {
         font-weight: 600;
-        font-size: 18px;
+        font-size: 14px;
         line-height: 150%;
         color: $neutral-900;
         margin: 0px 0px;
       }
       span {
         font-weight: 600;
-        font-size: 14px;
+        font-size: 12px;
         line-height: 150%;
         letter-spacing: 0.05em;
         text-transform: uppercase;
@@ -56,14 +56,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 348px;
-    height: 59px;
+    width: 20vw;
+    height: 3.5vw;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
-    border-radius: 16px;
+    border-radius: 12px;
     margin: 16px 0px;
     font-family: Montserrat;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 150%;
   }
   .redeem {
@@ -72,19 +72,23 @@
     color: white;
     .redeemText {
       display: flex;
+      align-items: center;
     }
     span {
-      margin: 0 5px !important;
+      margin: 0 3px !important;
       padding: 0 !important;
     }
   }
-
+  .redeem .image,
+  .notAvaiable .image{
+    min-width: 1.5vw !important;
+  }
   .notAvaiable {
     cursor: not-allowed;
     background: $neutral-200;
     color: $neutral-600;
     span {
-      margin: 0 5px !important;
+      margin: 0 3px !important;
       padding: 0 !important;
     }
   }
@@ -101,6 +105,109 @@
     cursor: not-allowed;
     &:before {
       content: "";
+    }
+  }
+}
+
+@media (max-width: 1024px){
+  .products{
+    width: 60%;
+    .productContainer{
+      .card{
+        .image{
+          padding: 44px 34px 50px 34px;
+        }
+      }
+      .redeem,
+      .notAvaiable{
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width:768px){
+  .products{
+    .productContainer{
+      width: 30vw;
+      margin: 24px 0 ;
+      .card{
+        .image{
+          width: 25vw;
+        }
+        .description{
+          width: 25vw;
+          height: 13vw;
+        }
+      }
+      .notAvaiable,
+      .redeem{
+        width: 25vw;
+        height: 5.5vw;
+      }
+    }
+  }
+}
+
+@media (max-width:425px){
+  .products{
+    width: 30%;
+    .productContainer{
+      width: 46vw;
+      .notAvaiable,
+      .redeem{
+        width: 40vw;
+        height: 9vw;
+        .image{
+          min-width: 4vw !important;
+        }
+      }
+      .card{
+        .image{
+          width: 40vw;
+        }
+        .description{
+          width: 40vw;
+          height: 15vw;
+          h6{
+            font-size: 12px;
+          }
+          span{
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:375px){
+  .products{
+    .productContainer{
+      .card{
+        .image{
+          padding: 54px 20px;
+        }
+        .description{
+          height: 23vw;
+          padding: 16px 14px 19px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:375px){
+  .products{
+    .productContainer{
+      .notAvaiable,
+      .redeem{
+        height: 12vw;
+        font-size: 10px;
+        span{
+          margin: 0 !important;
+        }
+      }
     }
   }
 }

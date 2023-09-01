@@ -43,7 +43,10 @@ function Coins() {
             <li className={selectedMount == 5000 ? styles.active : styles.aeroBtn} onClick={() => handleCoins(5000)}> <span>5000</span> </li>
             <li className={selectedMount == 7500 ? styles.active : styles.aeroBtn} onClick={() => handleCoins(7500)}> <span>7500</span> </li>
           </ul>
+          <div className={styles.addCoinsContainer}>
           <button className={styles.addCoinsBtn} onClick={() => addCoins(selectedMount)}> <Image className={styles.image} src={icon} alt='icon'/> Add Points </button>
+
+          </div>
         </div>
       </div>
     )

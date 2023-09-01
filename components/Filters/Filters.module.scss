@@ -4,26 +4,31 @@
   list-style: none;
   display: flex;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 13px;
   line-height: 150%;
   color: $neutral-600;
   width: 1464px;
   padding: 0;
+  align-items: center;
+  .filterContainer{
+    display: flex;
+  }
   .filter {
     padding-right: 30px;
+    height: 0%;
     border-right: solid 2px $neutral-300;
     select {
       margin: 0px 16px;
-      padding-left: 24px;
+      padding-left: 20px;
       font-family: Montserrat;
       font-weight: 600;
-      font-size: 18px;
+      font-size: 14px;
       line-height: 150%;
       color: $neutral-600;
-      width: 256px;
-      height: 59px;
+      width: 188px;
+      height: 42px;
       border: 1px solid $neutral-300;
-      border-radius: 16px;
+      border-radius: 10px;
       option:hover {
         background-color: $neutral-100;
       }
@@ -32,16 +37,15 @@
   .sort {
     align-items: center;
     display: flex;
-    padding: 0 100px 0 40px;
+    padding: 0 50px 0px 24px;
     .filterBtn,
     .active {
       font-family: Montserrat;
       font-weight: 600;
-      font-size: 18px;
-      margin: 0px 12px;
-      padding: 8px 24px;
-      width: 173px;
-      height: 43px;
+      font-size: 14px;
+      margin: 0px 10px;
+      width: 140px;
+      height: 34px;
       border-radius: 12px;
       border: none;
     }
@@ -65,7 +69,7 @@
         #176feb -5.34%,
         #ff80ff 106.58%
       ) !important;
-      padding: 8px 24px;
+      padding: 8px 20px;
       border-radius: 12px;
     }
     button:hover {
@@ -77,8 +81,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 259px;
-    height: 64px;
+    width: 16vw;
+    height: 3.6vw;
     border: 1px solid $neutral-300;
     border-radius: 16px;
     flex: none;
@@ -87,10 +91,10 @@
   }
   .prevBtn::before,
   .nextBtn::after {
-    height: 10px !important;
-    width: 10px !important;
-    border-bottom: 3px solid $neutral-500 !important;
-    border-right: 3px solid $neutral-500 !important;
+    height: 8px !important;
+    width: 8px !important;
+    border-bottom: 2px solid $neutral-500 !important;
+    border-right: 2px solid $neutral-500 !important;
     content: " " !important;
     display: inline-block !important;
   }
@@ -104,7 +108,7 @@
   }
   .prevBtn,
   .nextBtn {
-    padding: 8px;
+    padding: 5px;
     width: 40px;
     height: 40px;
     background: $neutral-200;
@@ -117,5 +121,164 @@
   .prevBtn:hover,
   .nextBtn:hover {
     opacity: 0.6;
+  }
+}
+
+@media (max-width:1024px){
+  .filterNav{
+    font-size: 12px;
+    .filter{
+      padding-right: 4px;
+      select{
+        font-size: 12px;
+        padding-left: 14px;
+        width: 150px;
+        height: 36px;
+      }
+    }
+    .sort{
+      padding: 0 20px 0px 12px;
+      .filterBtn,
+      .active{
+        font-size: 12px;
+        width: 130px;
+        height: 30px;
+        margin: 0 8px;
+      }
+    }
+    .pages{
+      .prevBtn,
+      .nextBtn{
+        margin: 0 8px;
+      }
+      .prevBtn{
+        padding: 5px 10px 5px 5px;
+      }
+      .nextBtn{
+        padding: 5px;
+      }
+      .prevBtn::before,
+      .nextBtn::after{
+        height: 5px !important;
+        width: 5px !important;
+      }
+    }
+  }
+}
+
+@media (max-width:768px){
+  .filterNav{
+    .sort{
+      .filterBtn,
+      .active{
+        width: 50px;
+        height: 35px;
+        padding: 0;
+        .filterResponsive{
+          font-size: 24px;
+        }
+        .filterResponsive.filterNew::before{
+          font-family: 'Material Symbols Outlined';
+          display:contents;
+          content:  "\e885";
+        }
+        .filterResponsive.filterLow::before{
+          font-family: 'Material Symbols Outlined';
+          display:contents;
+          content:  "\e5db";
+        }
+        .filterResponsive.filterHigh::before{
+          font-family: 'Material Symbols Outlined';
+          display:contents;
+          content:  "\e5d8";
+        }
+
+        .filterDesktop{
+          display: none;
+        }
+      }
+    }
+    .pages{
+      width: 21vw;
+      height: 5.6vw;
+    }
+  }
+}
+
+@media (max-width:425px){
+  .filterNav{
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 5vw;
+    .filterContainer{
+      display: flex;
+      border-bottom: solid 2px #dae4f2;
+      padding-bottom: 4vw;
+      .filter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        select{
+          font-size: 11px;
+          width: 120px;
+          height: 33px;
+          margin: 0 12px 0 0;
+        }
+      }
+    }
+    .sort{
+      padding: 0 20px 0 5px;
+      display: flex;
+      flex-direction: column;
+      .filterBtn,
+      .active{
+        margin-top: 5px;
+        width: 30px;
+        height: 25px;
+        .filterResponsive{
+          font-size: 20px;
+        }
+      }
+    }
+    .pages{
+      width: 38vw;
+      height: 10vw;
+      margin-top: 5vw;
+      margin-left: 13vw;
+      .nextBtn{
+        padding: 6px 3px 5px 5px;
+      }
+    }
+  }
+}
+
+@media (max-width:375px){
+  .filterNav{
+    padding-left: 2vw;
+    .filterContainer{
+      border-bottom: solid 2px #dae4f2;
+      .filter{
+        border-right: unset;
+      }
+    }
+    .pages{
+      width: 43vw;
+      margin-left: 16vw;
+    }
+  }
+}
+
+@media (max-width:320px){
+  .filterNav{
+    .sort{
+      padding: 0;
+    }
+    .filterContainer{
+      width: 86vw;
+    }
+    .pages{
+      width: 50vw;
+      height: 14vw;
+    }
   }
 }

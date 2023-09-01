@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
 @import "./variables.module.scss";
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "Montserrat";
+  overflow-x: hidden;
 }
 
 a {
@@ -20,7 +22,7 @@ a {
   min-height: unset !important;
   box-sizing: border-box !important;
   margin-bottom: 1rem !important;
-  width: 532px !important;
+  width: 450px !important;
   height: 80px !important;
   padding: 24px !important;
   border: solid 1px $green-default;
@@ -34,6 +36,7 @@ a {
   cursor: pointer !important;
   flex-direction: row !important;
   align-items: center !important;
+  font-size: 14px;
 }
 
 .Toastify__toast-icon svg {
@@ -42,4 +45,31 @@ a {
 
 .Toastify__close-button {
   align-self: end !important;
+}
+
+@media (max-width:425px) {
+  .Toastify__toast{
+    width: 410px !important;
+    height: 60px !important;
+    padding: 15px !important;
+    font-size: 12px;
+  }
+  
+}
+
+@media (max-width:375px) {
+  .Toastify__toast{
+    width: 360px !important;
+    padding: 10px !important;
+    align-items: center !important;
+  }
+  .Toastify__close-button{
+    align-self: unset !important;
+  }
+}
+
+@media (max-width:375px) {
+  .Toastify__toast{
+    width: 310px !important;
+  }
 }

@@ -1,8 +1,7 @@
 @import "../../styles/variables.module.scss";
 
 .walkthrough {
-  margin-top: 6%;
-  height: 528px;
+  height: 28vw;
   width: 100%;
   background: linear-gradient(
     102.47deg,
@@ -14,24 +13,25 @@
   .card1 {
     transform: rotate(-3deg);
     position: relative;
-    left: 4%;
+    right: 4%;
     bottom: 14%;
   }
   .card2 {
     z-index: 2;
     position: relative;
     bottom: 20%;
+    right: 8%;
   }
   .card3 {
     transform: rotate(3deg);
     z-index: 3;
     position: relative;
-    right: 4%;
+    right: 11.3%;
     bottom: 14%;
   }
   .card {
-    width: 532px;
-    height: 676px;
+    width: 29vw;
+    height: 37vw;
     border-radius: 32px;
     padding: 12px;
     background: white;
@@ -50,7 +50,7 @@
         align-items: flex-end;
         margin-left: 3vh;
         h3 {
-          font-size: 32px;
+          font-size: 25px;
           margin: 0;
           padding: 10px 80px 4px 20px;
           font-weight: 900;
@@ -61,7 +61,7 @@
       }
       p {
         font-weight: 600;
-        font-size: 18px;
+        font-size: 13px;
         line-height: 150%;
         padding-right: 70px;
         margin: 10px 30px;
@@ -80,10 +80,177 @@
         background: #e5f0ff;
         border-radius: 8px;
         padding: 8px !important;
-        height: 48px !important;
-        width: 48px !important;
+        height: 35px !important;
+        width: 35px !important;
         position: unset !important;
       }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .walkthrough{
+    .card{
+      width: 25vw;
+      height: 36vw;
+      .inner{
+        .icon{
+          padding: 6px !important;
+          height: 28px !important;
+          width: 28px !important;
+        }
+        .description{
+          h3{
+            font-size: 15px;
+            padding: 10px 50px 4px 20px;
+          }
+        }
+        p{
+          font-size: 10px;
+          padding-right: 20px;
+        }
+      }
+    }
+    .card1{
+      right: 13.5%;
+    }
+    .card2{
+      right: 16.5%;
+    }
+    .card3{
+      right: 19%;
+    }
+  }
+}
+
+@media (max-width:768px){
+  .walkthrough{
+    .card{
+      height: 41vw;
+      .inner{
+        .icon{
+          padding: 4px !important;
+          height: 22px !important;
+          width: 22px !important;
+        }
+        .description{
+          h3{
+            font-size: 12px;
+            padding: 10px 35px 4px 6px;
+          }
+        }
+        p{
+          padding-right: 0;
+        }
+      }
+    }
+    .card1{
+      right: 22.5%;
+    }
+    .card2{
+      right: 24.5%;
+    }
+    .card3{
+      right: 26.8%;
+    }
+  }
+}
+
+@media (max-width:425px){
+  .walkthrough{
+    .card{
+      width: 30vw;
+      height: 60vw;
+      border-radius: 10px;
+      padding: 6px;
+      .inner{
+        border-radius: 10px;
+        .description{
+          margin-left: 10px;
+          h3{
+            font-size: 10px;
+            padding: 6px 10px 4px 6px;
+          }
+        }
+        p{
+          margin: 3px 12px;
+        }
+        .image{
+          border-radius: 10px 10px 0 0;
+        }
+      }
+    }
+    .card1{
+      right: 34%;
+    }
+    .card2{
+      right: 35.5%
+    }
+    .card3{
+      right: 37.1%;
+    }
+  }
+}
+
+@media (max-width:375px){
+  .walkthrough{
+    margin-top: 10vw;
+    .card{
+      width: 34vw;
+      .inner{
+        p{
+          font-size: 9px;
+        }
+      }
+    }
+    .card1{
+      right: 36.5%;
+    }
+    .card2{
+      right: 37.5%;
+    }
+    .card3{
+      right: 38.5%;
+    }
+  }
+}
+
+@media (max-width:320px){
+  .walkthrough{
+    margin-top: 20vw;
+    .card{
+      width: 34vw;
+      height: 70vw;
+      .inner{
+        .description{
+          margin-left: 6px;
+          h3{
+            font-size: 9px;
+            padding: 6px 0px 4px 1px;
+          }
+        }
+        .icon{
+          padding: 3px !important;
+          height: 16px !important;
+          width: 16px !important;
+        }
+        p{
+          font-size: 9px;
+          margin: 3px 10px;
+        }
+      }
+    }
+    .card1{
+      bottom: 30%;
+      right: 38.3%;
+    }
+    .card2{
+      bottom: 30%;
+      right: 39.2%;
+    }
+    .card3{
+      bottom: 30%;
+      right: 40.2%;
     }
   }
 }

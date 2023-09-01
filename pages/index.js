@@ -36,7 +36,9 @@ function Home() {
           </Link>
         </div>
         <div >
-          <Image className={styles.image} src={image1} alt="banner" height={795} width={897} />
+          <div className={styles.imageContainer}>
+            <Image className={styles.image} src={image1} alt="banner" height={595} width={680} />
+          </div>
           <div className={styles.imageBG} />
         </div>
         <div className={styles.landingBG}/>

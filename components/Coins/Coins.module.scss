@@ -2,23 +2,27 @@
 .coins {
   z-index: 20;
   display: flex;
-  width: 172px;
-  height: 48px;
-  padding: 8px 16px;
+  width: 9.7vw;
+  height: 2.7vw;
+  padding: 4px 10px;
   border: 1px solid #dae4f2;
   box-sizing: border-box;
   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
-  border-radius: 16px;
+  border-radius: 10px;
   justify-content: space-between;
   .mount {
     font-weight: 600;
-    font-size: 18px;
-    line-height: 150%;
+    font-size: 15px;
+    line-height: 1.9vw;
     background: linear-gradient(102.47deg, #176feb -5.34%, #ff80ff 106.58%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   .coinIcon {
+    min-width: 1.6vw;
+    max-width: 1.6vw;
+    min-height: 100%;
+    max-height: 100%;
     height: 32px;
     width: 32px;
   }
@@ -30,8 +34,8 @@
 .dropdownContent {
   display: none;
   position: absolute;
-  width: 312px;
-  height: 404px;
+  width: 20vw;
+  height: 30vw;
   right: 0px;
   top: 96px;
   z-index: 10;
@@ -43,31 +47,31 @@
     padding: 24px;
     border: 1px solid $neutral-300;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 150%;
     color: $neutral-900;
     margin: 0;
   }
   .aerocard {
-    padding: 16px !important;
+    padding: 20px !important;
     height: 100% !important;
     width: 100% !important;
   }
   .coinsBtn {
     display: flex;
-    padding: 15px;
+    padding: 0px 15px;
     list-style: none;
     .aeroBtn,
     .active {
       cursor: pointer;
       padding: 4px 16px;
-      width: 85.33px;
-      height: 35px;
+      width: 85px;
+      height: 30px;
       border-radius: 12px;
       margin: 0px 4px;
       font-family: Montserrat;
       font-weight: 600;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 150%;
       border: none;
     }
@@ -93,30 +97,151 @@
       ) !important;
     }
   }
-  .addCoinsBtn {
+  .addCoinsContainer{
     display: flex;
-    width: 264px;
-    height: 51px;
-    border: none;
-    background: linear-gradient(102.47deg, #176feb -5.34%, #ff80ff 106.58%);
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
-    border-radius: 16px;
-    margin: 24px 0px;
-    font-family: Montserrat;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 150%;
-    color: white;
-    margin: 16px;
-    justify-content: center;
-    align-items: center;
-    span {
-      margin: 0 5px !important;
-      padding: 0 !important;
+    justify-content: center ;
+    .addCoinsBtn {
+      display: flex;
+      width: 220px;
+      height: 45px;
+      border: none;
+      background: linear-gradient(102.47deg, #176feb -5.34%, #ff80ff 106.58%);
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+      border-radius: 16px;
+      margin: 24px 0px;
+      font-family: Montserrat;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      color: white;
+      margin: 16px;
+      justify-content: center;
+      align-items: center;
+      span {
+        margin: 0 5px !important;
+        padding: 0 !important;
+      }
     }
   }
   .aeroBtn:hover,
   .addCoinsBtn:hover {
     opacity: 0.7;
+  }
+}
+
+@media (max-width: 1024px){
+  .dropdownContent{
+    width: 22vw;
+    height: 32vw;
+    h6{
+      font-size: 14px;
+    }
+    .coinsBtn{
+      margin: 4px 0;
+      .aeroBtn,
+      .active{
+        width: 56px;
+        display: flex;
+        height: 30px;
+        border-radius: 10px;
+        font-size: 13px;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .addCoinsContainer{
+      .addCoinsBtn{
+        width: 160px;
+        height: 35px;
+        font-size: 12px;
+        .image{
+          min-width: 60% !important;
+        }
+      }
+    }
+  }
+  .coins{
+    width: 10vw;
+    height: 3vw;
+    .mount{
+      font-size: 12px;
+    }
+  }
+}
+
+@media (max-width:768px){
+  .coins{
+    width:13vw;
+    height: 3.5vw;
+  }
+  .dropdownContent{
+    text-align: center;
+    width: 50vw;
+    height: 47vw;
+    h6{
+      font-size: 13px;
+      text-align: left;
+      padding: 16px 24px;
+    }
+    .coinsBtn{
+      align-items: center;
+      .aeroBtn,
+      .active{
+        margin: 4px;
+        width: 15vw;
+        height: 4.5vw;
+        
+      }
+    }
+  }
+}
+
+@media (max-width:425px){
+  .coins{
+    width: 24vw;
+    height: 6vw;
+    align-items: center;
+    .coinIcon{
+      min-width: 4vw !important;
+    }
+    .dropdown{
+      width: 26px;
+    }
+  }
+  .dropdownContent{
+    width: 55vw;
+    height: 72vw;
+    .coinsBtn{
+      flex-direction: row;
+      .aeroBtn,
+      .active{
+        padding: 14px 0;
+      }
+    }
+  }
+}
+
+@media (max-width:375px){
+  .coins{
+    width: 30vw;
+    height: 9vw;
+    .coinIcon{
+      min-width: 70% !important;
+    }
+  }
+  .dropdownContent{
+    height: 78vw;
+  }
+}
+
+@media (max-width:320px){
+  .coins{
+    height: 10vw;
+    .mount{
+      line-height: unset;
+    }
+  }
+  .dropdownContent{
+    height: 84vw;
   }
 }

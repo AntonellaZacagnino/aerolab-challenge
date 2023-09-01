@@ -12,12 +12,13 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 }
 
 .footer a {
   color: $neutral-600;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 150%;
   display: flex;
   span {
@@ -84,18 +85,18 @@
   justify-content: space-between;
   align-items: center;
   padding: 40px 0px;
-
+  z-index: 10 ;
   position: absolute;
   height: 128px;
-  left: 228px;
-  right: 228px;
-  top: 0px;
+  left: 12.8vw;
+  right: 174px;
+  top: -8px;
   // .coins {
   //   z-index: 10;
   //   display: flex;
-  //   width: 172px;
-  //   height: 48px;
-  //   padding: 8px 16px;
+  //   width: 9.7vw;
+  //   height: 2.7vw;
+  //   padding: 4px 10px;
   //   border: 1px solid #dae4f2;
   //   box-sizing: border-box;
   //   box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
@@ -103,19 +104,23 @@
   //   justify-content: space-between;
   //   .mount {
   //     font-weight: 600;
-  //     font-size: 18px;
+  //     font-size: 15px;
   //     line-height: 150%;
   //     background: linear-gradient(102.47deg, #176feb -5.34%, #ff80ff 106.58%);
   //     background-clip: text;
   //     -webkit-text-fill-color: transparent;
   //   }
   //   .coinIcon {
+  //       min-width: 1.6vw;
+  //     max-width: 1.6vw;
+  //     min-height: 100%;
+  //     max-height: 100%;
   //     height: 32px;
   //     width: 32px;
   //   }
   // }
   .logo {
-    width: 126px;
+    width: 6.8vw;
     height: 48px;
   }
 }
@@ -126,47 +131,48 @@
 // }
 
 .landing {
-  width: 1920px;
-  height: 920px;
+  margin-right: 12.5vw;
+  height: 58vw;
   display: flex;
   place-content: center;
   .landingBG {
     background-image: url("../public/images/wavePattern.svg");
     position: absolute;
-    top: 140px;
-    width: inherit;
-    height: 1300px;
+    top: 110px;
+    width: 100%;
+    height: 55vw;
     z-index: -5;
   }
   .image {
     z-index: 5;
     width: 897px;
     height: 795px;
+    left: -5vw !important;
   }
   .imageBG {
     position: relative;
-    width: 722px;
-    height: 600px;
-    left: 11%;
-    bottom: 65.5%;
+    width: 39.7vw;
+    height: 32.7vw;
+    left: 3.1vw;
+    bottom: 33vw;
     background: linear-gradient(
       102.47deg,
       rgba(23, 111, 235, 0.5) -5.34%,
       rgba(255, 128, 255, 0.5) 106.58%
     );
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
-    border-radius: 104px;
+    border-radius: 5.7vw;
   }
 }
 
 .title {
   height: 577px;
-  width: 602px;
-  padding: 10% 0;
+  width: 490px;
+  padding: 9.5% 0;
   span {
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 150%;
     letter-spacing: 0.24em;
     text-transform: uppercase;
@@ -174,8 +180,9 @@
     color: $neutral-600;
   }
   p {
+    width: 29vw;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 150%;
     color: $neutral-600;
   }
@@ -185,7 +192,7 @@
 .mainTitle span {
   margin: 5px 0;
   font-weight: 900;
-  font-size: 200px;
+  font-size: 150px;
   line-height: 80%;
   color: $neutral-900;
   text-transform: uppercase;
@@ -204,20 +211,21 @@
 .buttonPrimary {
   background: linear-gradient(102.47deg, #176feb -5.34%, #ff80ff 106.58%);
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
-  border-radius: 24px;
-  padding: 20px 40px;
+  border-radius: 18px;
+  padding: 11px 32px;
   border: none;
   display: flex;
+  align-items: center;
   span {
     font-family: "Montserrat";
     line-height: 150%;
-    font-size: 18px;
+    font-size: 13px;
     color: white;
     letter-spacing: normal;
   }
   .icon {
     color: white;
-    height: 30px;
+    height: 25px;
     position: relative;
   }
 }
@@ -228,12 +236,12 @@
 }
 
 .main {
-  margin: 13%;
+  margin: 13% 0 0 14vw;
   h2 {
     font-family: Montserrat;
     font-style: normal;
     font-weight: 900;
-    font-size: 48px;
+    font-size: 36px;
     line-height: 80%;
     color: $neutral-900;
     span {
@@ -365,5 +373,219 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px){
+  .nav{
+    .logo{
+      width: 8vw;
+    }
+  }
+  .main{
+    margin: 10% 0 0 8vw;
+  }
+  .landing{
+    .imageContainer{
+      position: relative;
+      right: 21vw;
+      bottom: 4.7vw;
+      .image{
+        min-width: 497px !important;
+        min-height: 425px !important;
+      }
+    }
+    .title{
+      span{
+        font-size: 12px;
+      }
+      .mainTitle{
+        span{
+          font-size: 110px;
+        }
+        font-size: 110px;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+    .landingBG{
+      top: 10vw;
+      left: 0;
+      width: 100%;
+      height: 48vw;
+    }
+    .imageBG{
+      right: 10vw;
+      left: auto  ;
+      bottom: 46vw;
+    }
+  }
+}
+
+@media (max-width:768px){
+  .main{
+    h2{
+      font-size: 30px;
+    }
+  }
+  .nav{
+    left: 7vw;
+    right: 10vw;
+    .logo{
+      width: 10vw;
+    }
+  }
+  .landing{
+    margin-right: 28vw;
+    .title{
+      span,
+      p{
+        font-size: 10px;
+      }
+      .mainTitle{
+        font-size: 80px;
+        span{
+          font-size: 80px;
+        }
+      }
+      .buttonPrimary{
+        border-radius: 12px;
+        padding: 6px 26px;
+      }
+    }
+    .imageContainer {
+        right: 44.2vw;
+        bottom: 8.4vw;
+      .image{
+        min-width: 397px !important;
+        min-height: 325px !important;
+      }
+    }
+    .imageBG{
+      right: 22vw;
+      bottom: 59vw;
+    }
+  }
+}
+
+@media (max-width:425px){
+  .main{
+    margin: 11% 0 0 8vw;
+    h2{
+      font-size: 25px;
+    }
+  }
+  .nav{
+    .logo{
+      width: 20vw;
+    }
+  }
+  .landing{
+    height: 110vw;
+    .imageContainer{
+      right: 152vw;
+      bottom: 28.9vw;
+      .image{
+        min-width: 215px !important;
+        min-height: 190px !important;
+      }
+    }
+    .imageBG{
+      right: 94vw;
+      bottom: 110vw;
+    }
+    .landingBG{
+      top: 20vw;
+      height: 100vw;
+    }
+    .title{
+      width: 590px;
+      .mainTitle{
+        width: 0;
+        font-size: 50px;
+        span{
+          font-size: 50px;
+        }
+      }
+      p{
+        width: 44vw;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media (max-width:375px){
+  .nav{
+    .logo{
+      width: 28vw;
+    }
+  }
+  .landing{
+    .title{
+      width: 635px;
+      .buttonPrimary{
+        padding: 6px;
+        span{
+          font-size: 9px;
+        }
+      }
+    }
+    .imageBG{
+      right: 123vw;
+      bottom: 120.2vw;
+      width: 42.5vw;
+      height: 35.7vw;
+    }
+    .imageContainer{
+      right: 190vw;
+      .image{
+        min-width: 200px !important;
+        min-height: 185px !important;
+      }
+    }
+  } 
+}
+
+@media (max-width:320px){
+  .nav{
+    .logo{
+      width: 28vw;
+    }
+  }
+  .landing{
+    .title{
+      width: 670px;
+      padding: 7.5% 0;
+      p{
+        width: 57vw;
+      }
+      .buttonPrimary{
+        padding: 6px;
+        span{
+          font-size: 9px;
+        }
+      }
+    }
+    .imageBG{
+      right: 160vw;
+      bottom: 150vw;
+      width: 40vw;
+    }
+    .landingBG{
+      top: 26vw;
+    }
+    .imageContainer{
+      right: 244vw;
+      bottom: 43.5vw;
+      .image{
+        min-width: 160px !important;
+        min-height: 150px !important;
+      }
+    }
+  } 
+  .main{
+    margin: 11% 0 0 4vw;
   }
 }
